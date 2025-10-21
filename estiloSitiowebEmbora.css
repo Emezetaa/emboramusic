@@ -1,0 +1,574 @@
+*{
+    font-family: "Montserrat", Poppins, Roboto;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fffbe6;
+}
+/* BOTONES MENÚ */
+
+#inicio {
+    position: sticky;
+    background-image: url("Recursos/emboraCompleto.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: rgba(255,103,0, 0.95);
+    backdrop-filter: blur(3px);
+    padding:15px;
+    z-index: 1000;
+}
+
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0,5px;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+
+
+/* BOTONES SALSA Y SON PA' GOZAR */
+.boton {
+    background-color: #FF6700;
+    color: white;
+    padding: 12px 25px;
+    border-radius:8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 4s ease;
+}
+.boton:hover {
+    background-color: #FF6700;
+}
+
+
+/* TÍTULO DE ENCABEZADO */
+
+.heroContent{
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+.heroContent h1{
+    font-size: 6rem;
+    margin-bottom: 10px;
+    font-family: "Montserrat", Poppins, Roboto;
+}
+
+.heroContent p{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+#inicio h1 {
+    font-size: 8vw;
+    color: white;
+}
+
+#inicio p {
+    color: white;
+    padding: 0;
+    font-size: 1.5vw;
+}
+
+#inicio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+
+
+
+/*NOSOTROS*/
+
+.Nosotros{
+    text-align: center;
+    padding-bottom: 80px;
+    padding-top: 100px;
+}
+
+.Nosotros h2.tituloNosotros {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.Nosotros p{
+    max-width: 800px;
+    margin: 0 auto 50px;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1.1em ;
+    color: #333;
+}
+
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.Nosotros{
+    text-align: center;
+    padding-bottom: 80px;
+    padding-top: 100px;
+}
+
+
+
+
+/* SECCIÓN INTEGRANTES */
+#Integrantes {
+    text-align: center;
+    padding: 80px 20px 80px 20px;
+    background-color: #fff6da;
+}
+
+#Integrantes h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+.galeriaIntegrantes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    justify-items: center;
+    margin-top: 40px;
+    padding-bottom: 80px;
+}
+
+.integrantes {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+
+}
+
+.integrantes img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.integrantes:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.integrantes:hover .overlay {
+    opacity: 1;
+}
+
+.overlay p {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.overlay span {
+    font-weight: normal;
+    font-size: 13px;
+    color: white;
+}
+
+
+
+/* SERVICIOS */
+
+
+
+#Servicios {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+#Servicios h2{
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+#Servicios ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    text-align: left;
+
+}
+
+#Servicios ul li {
+    font-size: 1.1em;
+    padding: 8px 0 ;
+    border-bottom: 1px solid #FF6700;
+}
+#Servicios p {
+    text-align: center;
+    padding: 0;
+
+}
+
+#Servicios a {
+    text-decoration: none;
+    color: #FF6700;
+    padding: 5px 5px;
+    border: 1px solid #FF6700;
+    border-radius: 5px;
+}
+
+
+
+
+
+/* PÁGINA WEB CONTRATACIONES */
+
+#contactoPagina {
+    background-image: url("Recursos/backgroun2.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.contenedorFormulario{
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    max-width: 450px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    text-align: center;
+}
+
+.contenedorFormulario h2{
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    margin-top: 0;
+    color: #FF6700;
+    letter-spacing:normal;
+}
+
+.formulario{
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.formulario label{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    color: #FF6700;
+    font-weight: 600;
+    text-align: left;
+}
+
+.formulario input,
+.formulario textarea{
+    width: 100%;
+    padding: 12px 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 1.1rem;
+    text-align: left;
+    transition: border-color 0.3s ease;
+}
+
+.formulario input::placeholder,
+.formulario textarea::placeholder{
+    color: #aaa;
+}
+
+.formulario input:focus,
+.formulario textarea:focus{
+    outline: none;
+    border-color: #FF6700;
+    box-shadow: 0 0 5px rgba(255, 103, 0, 0.3);
+}
+
+/*BOTÓN ENVIAR*/
+
+
+.submit-button{
+    background-color: #FF6700;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.submit-button:hover{
+    background-color: #e65c00;
+
+}
+.submit-button:active{
+    background-color: #cc5200;
+    transform: scale(0.98);
+}
+
+/*Redes sociales*/
+
+.redesSociales{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.redesSociales p{
+    color:#FF6700;
+    margin-bottom: 15px;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.enlacesRedes{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.enlacesRedes li {
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+
+.enlacesRedes li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+.enlacesRedes > li a i{
+    margin-right: 10px;
+    width: 15px;
+    text-align: left;
+}
+
+.enlacesRedes li a:hover{
+    color: #ff8331;
+    text-decoration: underline;
+}
+
+
+
+/* CALCULADORA */
+
+ #calculadora{
+     font-family: 'Montserrat', sans-serif;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     margin: 0;
+     padding: 20px;
+ }
+
+
+/* Contenedor principal de la calculadora */
+#contenedorOperanciones {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 2rem;
+    color: #FF6700;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.subtitulo {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+
+.escribirNumero {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.input-field {
+    width: 50%;
+    padding: 12px 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #FF6700;
+    outline: none;
+}
+
+/* Contenedor de botones de operaciones */
+.bontones {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+/* Estilo botones */
+.clac-button {
+    background-color: #FF6700;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 4px 8px rgba(255, 103, 0, 0.4);
+}
+
+.clac-button:hover {
+    background-color: #e65c00;
+}
+
+.clac-button:active {
+    background-color: #cc5200;
+    transform: scale(0.98);
+}
+
+.resultado {
+    text-align: left;
+    margin-top: 20px;
+    padding: 20px 0; /* padding solo vertical */
+}
+
+.resultadoTitulo {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+#contenedorResultado.result-display {
+    background-color: #ffffff;
+    border: 3px solid #FF6700;
+    padding: 15px;
+    border-radius: 12px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.result-display p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #222;
+    margin: 0;
+}
+
+@media (max-width: 500px) {
+    #contenedorOperanciones {
+        padding: 20px;
+    }
+
+    .clac-button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+
+    .result-display p {
+        font-size: 1.5rem;
+    }
+}
+
+
