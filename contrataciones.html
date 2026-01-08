@@ -3,52 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <title>Contacto | Embora Music</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="LOGO/logoEmbora.png">
     <link rel="stylesheet" href="estiloSitiowebEmbora.css">
 </head>
 
-<body id="contactoPagina">
-<nav>
-    <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="calculadora.html">Calcula tu Fiesta</a></li>
-    </ul>
-</nav>
+<body id="contactoPagina" style="padding-top: 100px; background-color: #fefefe;">
 
-<div class="contenedorFormulario">
-    <h2>Contáctanos</h2>
-
-    <form action="gracias.html" method="get">
-        <div class="formulario">
-            <label for="name">Nombre</label>
-            <input type="text" id=name name="nombre" placeholder=" ">
+    <nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html" style="color: #FF6700;">EMBORA MUSIC</a>
         </div>
+    </nav>
 
-        <div class="formulario">
-            <label for="email">Correo</label>
-            <input type="text" id=email name="email" placeholder=" "
+    <section id="Contrataciones" class="py-5">
+        <div class="container">
+            <div class="row mb-5 text-center">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold" style="color: #333333;">¡Vive la mejor experiencia con Embora Music!</h2>
+                    <p class="text-muted fs-5">Salsa y Son Pa' Gozar.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-7">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4 p-md-5">
+                            <h4 class="mb-4 fw-bold">Cotiza tu evento</h4>
+                            
+                            <form onsubmit="validarEnvio(event)">
+                                <div class="mb-3">
+                                    <label class="form-label small fw-bold">Correo Electrónico</label>
+                                    <input type="email" id="emailContacto" class="form-control border-warning-subtle" placeholder="ejemplo@correo.com" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label small fw-bold">Tipo de evento</label>
+                                    <div class="d-flex flex-wrap gap-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="evt" id="f1" checked>
+                                            <label class="form-check-label" for="f1">Bodas</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="evt" id="f2">
+                                            <label class="form-check-label" for="f2">Eventos públicos</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="evt" id="f3">
+                                            <label class="form-check-label" for="f3">Festivales salseros</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="evt" id="f4">
+                                            <label class="form-check-label" for="f4">Fiestas Privadas</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label small fw-bold">Mensaje</label>
+                                    <textarea class="form-control border-warning-subtle" rows="4" placeholder="Fecha, lugar y horario..."></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-lg w-100 text-white shadow-sm" style="background-color: #FF6700; border: none;">
+                                    Enviar solicitud
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="card border-0 shadow-sm h-100 text-white" style="background-color: #FF6700;">
+                        <div class="card-body p-4 p-md-5 text-center">
+                            <h4 class="mb-4 fw-bold text-white text-start">Nuestras Redes Sociales</h4>
+                            
+                            <div class="d-grid gap-3">
+                                <a href="https://wa.me/573001112233" target="_blank" class="btn btn-dark border-0 p-3 bg-black bg-opacity-25 text-start">
+                                    WhatsApp
+                                </a>
+                                <a href="https://www.instagram.com/emboramusic" target="_blank" class="btn btn-dark border-0 p-3 bg-black bg-opacity-25 text-start">
+                                    Instagram
+                                </a>
+                                <a href="https://www.facebook.com/EmboraMusic" target="_blank" class="btn btn-dark border-0 p-3 bg-black bg-opacity-25 text-start">
+                                    Facebook
+                                </a>
+                                <a href="https://www.tiktok.com/@embora06" target="_blank" class="btn btn-dark border-0 p-3 bg-black bg-opacity-25 text-start">
+                                    TikTok
+                                </a>
+                            </div>
+
+                            <div class="mt-5 pt-4 border-top border-white border-opacity-25 text-center">
+                                <p class="small" style="color: #ffe0cc;">Montería, Córdoba, Colombia <br> &copy; 2025 Embora Music</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
         </div>
+    </section>
 
-
-        <div class="formulario">
-            <label for="mensaje"> Mensaje</label>
-            <textarea id=mensaje name="mensaje" rows="5" placeholder=" "></textarea>
-        </div>
-
-        <button type="submit" class="submit-button">Enviar &raquo;</button>
-    </form>
-</div>
-
-<div class="redesSociales">
-    <p>También puedes escribirnos a:</p>
-    <ul class="enlacesRedes">
-        <li><a href="https://wa.me/573001112233" target="_blank">WhatsApp</a></li>
-        <li><a href="https://www.instagram.com/emboramusic" target="_blank">Instagram</a></li>
-        <li><a href="https://www.facebook.com/EmboraMusic?utm_source=chatgpt.com" target="_blank">Facebook</a></li>
-        <li><a href=https://www.youtube.com/@emboramusic" target="_blank">Youtube</a></li>
-        <li><a href="https://www.tiktok.com/@embora06" target="_blank">TikTok</a></li>
-    </ul>
-</div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/funciones.js"></script>
 </body>
 </html>
